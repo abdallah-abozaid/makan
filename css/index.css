@@ -25,7 +25,10 @@ body {
   background-color: var(--body_color);
   perspective: 500;
   padding-top: 1rem;
-  overflow-x: hidden;
+  width: 100%;
+}
+section {
+  overflow: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -215,9 +218,9 @@ header > div > div > a:hover {
   z-index: -1;
 }
 .section1 > .imgs > img:nth-of-type(1) {
-  top: -100px;
-  left: -100px;
-  width: 1100px;
+  top: 0px;
+  left: 10%;
+  width: 50%;
 }
 .section1 > .imgs > img:nth-of-type(2) {
   top: -50px;
@@ -258,12 +261,11 @@ header > div > div > a:hover {
 @media (max-width: 1550px) {
   .section1 > .imgs > img {
     position: absolute;
-    width: 800px;
+    width: 700px;
   }
   .section1 > .imgs > img:nth-of-type(1) {
-    top: -250px;
-    left: -150px;
-    width: 900px;
+    top: 0px;
+    width: 40%;
   }
   .section1 > .imgs > img:nth-of-type(2) {
     top: -130px;
@@ -271,7 +273,7 @@ header > div > div > a:hover {
   }
   .section1 > .imgs > img:nth-of-type(3) {
     top: -110px;
-    right: -550px;
+    right: -520px;
   }
   .section1 > .container > p:first-of-type {
     font-size: 110px;
@@ -281,16 +283,11 @@ header > div > div > a:hover {
   }
   .section1 > .container > a {
     font-size: 27px;
-    margin-bottom: 6rem;
   }
 }
 @media (max-width: 992px) {
   .section1 > .imgs > img {
     width: 700px;
-  }
-  .section1 > .imgs > img:nth-of-type(1) {
-    width: 800px;
-    z-index: -1;
   }
   .section1 > .imgs > img:nth-of-type(2) {
     top: -120px;
@@ -330,7 +327,6 @@ header > div > div > a:hover {
   .section1 > .container > a {
     font-size: 18px;
     width: 90%;
-    margin-bottom: 4rem;
   }
 }
 /* -------end section1 */
@@ -340,15 +336,15 @@ header > div > div > a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
-  margin-top: 5rem;
+  padding-bottom: 5rem;
+  padding-top: 5rem;
 }
 
 .section2 > .imgs > img {
   position: absolute;
-  width: 600px;
-  top: -150px;
-  left: -200px;
+  width: 400px;
+  top: 0px;
+  left: 0px;
   z-index: -1;
 }
 .section2 > .container {
@@ -383,7 +379,7 @@ header > div > div > a:hover {
 
 @media (max-width: 1550px) {
   .section2 > .imgs > img {
-    width: 500px;
+    width: 250px;
   }
   .section2 > .container img {
     width: 33%;
@@ -401,8 +397,8 @@ header > div > div > a:hover {
 }
 @media (max-width: 992px) {
   .section2 > .imgs > img {
-    width: 400px;
-    left: -170px;
+    width: 200px;
+    left: 0px;
   }
   .section2 > .container img {
     width: 33%;
@@ -438,6 +434,9 @@ header > div > div > a:hover {
 }
 /* -------end section2 */
 /* -------start section3 */
+.section3 {
+  padding: 4rem 0;
+}
 .section3 .row > div {
   position: relative;
 }
@@ -635,6 +634,9 @@ header > div > div > a:hover {
 }
 /* -------end section3 */
 /* -------start section4 */
+.section4 {
+  padding: 4rem 0;
+}
 .section4 .row > div {
   position: relative;
 }
@@ -863,6 +865,9 @@ header > div > div > a:hover {
 }
 /* -------end section4 */
 /* -------start section5 */
+.section5 {
+  padding: 4rem 0;
+}
 .section5 .row > div {
   position: relative;
 }
