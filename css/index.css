@@ -90,9 +90,10 @@ img {
     transform: translateY(0rem);
   }
   100% {
-    transform: translateY(1rem);
+    transform: translateY(0.6rem);
   }
 }
+
 @keyframes wiggle {
   0%,
   7% {
@@ -312,6 +313,11 @@ header > div > div > a:hover {
   }
 }
 @media (max-width: 576px) {
+  .section1 {
+    height: 60vh;
+    align-items: flex-start;
+    padding-top: 20%;
+  }
   .section1 > .imgs > img:nth-of-type(2) {
     opacity: 0.3;
   }
@@ -319,10 +325,10 @@ header > div > div > a:hover {
     opacity: 0.3;
   }
   .section1 > .container > p:first-of-type {
-    font-size: 50px;
+    font-size: 60px;
   }
   .section1 > .container > p:last-of-type {
-    font-size: 17px;
+    font-size: 21px;
   }
   .section1 > .container > a {
     font-size: 18px;
@@ -358,15 +364,6 @@ header > div > div > a:hover {
   transition: all 0.3s ease-in-out;
 }
 
-.section2 > .container img:nth-of-type(2):hover {
-  transform: translateY(-5rem) scale(1.1);
-}
-.section2 > .container img:nth-of-type(1):hover {
-  transform: translateX(-4rem) scale(1.1);
-}
-.section2 > .container img:nth-of-type(3):hover {
-  transform: translateX(4rem) scale(1.1);
-}
 .section2 > .container img:nth-of-type(2) {
   transform: translateY(-5rem);
 }
@@ -415,21 +412,39 @@ header > div > div > a:hover {
   }
 }
 @media (max-width: 576px) {
+  .section2 {
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+  }
   .section2 > .container {
     flex-wrap: wrap;
   }
   .section2 > .container img {
-    width: 100%;
+    width: 33.3%;
     margin: 0;
   }
   .section2 > .container img:nth-of-type(1) {
-    transform: translateX(-0rem);
+    transform: translateX(-0rem) scale(1.4) rotateX(20deg);
+    z-index: -3;
   }
   .section2 > .container img:nth-of-type(3) {
-    transform: translateX(0rem) translateY(-10rem);
+    transform: translateX(0rem) scale(1.4);
+    z-index: -1;
   }
   .section2 > .container img:nth-of-type(2) {
-    transform: translateY(-5rem);
+    transform: translateY(-1rem) scale(1.4);
+  }
+  /* ------ */
+  .fstImg {
+    transform: translateX(-0.5rem) scale(1.8) !important;
+    z-index: -3 !important;
+  }
+  .therdImg {
+    transform: translateX(0.5rem) scale(1.8) !important;
+    z-index: -1 !important;
+  }
+  .secImg {
+    transform: translateY(-0.5rem) scale(2) !important;
   }
 }
 /* -------end section2 */
@@ -460,24 +475,23 @@ header > div > div > a:hover {
 }
 .section3 .row > div:last-of-type > .imgs img:nth-of-type(2) {
   bottom: 30%;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.4s linear infinite alternate;
   left: -7%;
 }
 .section3 .row > div:last-of-type > .imgs img:nth-of-type(3) {
   bottom: -2%;
   left: 40%;
-  transform: translateX(-50%);
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.8s linear infinite alternate;
 }
 .section3 .row > div:last-of-type > .imgs img:nth-of-type(4) {
   bottom: 15%;
   right: 15%;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.3s linear infinite alternate;
 }
 .section3 .row > div:last-of-type > .imgs img:nth-of-type(5) {
   top: 15%;
   right: 15%;
-  animation: wiggle 2s linear infinite;
+  animation: wiggle 3s linear infinite;
 }
 .section3 .row > div:first-of-type {
   display: flex;
@@ -591,28 +605,49 @@ header > div > div > a:hover {
 @media (max-width: 576px) {
   .section3 {
     margin-top: 0rem;
+    padding-bottom: 0rem;
+  }
+  .section3 .row > div:last-of-type > .imgs img {
+    transition: all 0.3s ease-in-out;
   }
   .section3 .row > div:last-of-type > img {
     width: 80%;
-    margin: 0 10% 6rem 0;
+    margin: 0 10% 3rem 0;
   }
   .section3 .row > div:last-of-type > .imgs img {
     width: 40px;
   }
   .section3 .row > div:last-of-type > .imgs img:nth-of-type(3) {
-    bottom: 5rem;
+    bottom: 30%;
+    left: unset;
+    right: 13%;
+    width: 50px;
   }
   .section3 .row > div:last-of-type > .imgs img:nth-of-type(4) {
-    right: 5%;
-    bottom: 30%;
+    right: 13%;
+    bottom: 60%;
+    width: 70px;
   }
   .section3 .row > div:last-of-type > .imgs img:nth-of-type(5) {
-    right: 5%;
+    right: 40%;
+    width: 60px;
+    top: 20%;
+    z-index: -3;
+  }
+  .showHello {
+    top: 10% !important;
+    right: 4% !important;
   }
   .section3 .row > div:last-of-type > .imgs img:nth-of-type(1),
   .section3 .row > div:last-of-type > .imgs img:nth-of-type(2) {
-    left: 5%;
+    left: 13%;
     bottom: 40%;
+    width: 60px;
+  }
+  .section3 .row > div:last-of-type > .imgs img:nth-of-type(1) {
+    top: 15%;
+    width: 80px;
+    left: 13%;
   }
   .section3 .row > div:first-of-type .texts p:first-of-type {
     font-size: 22px;
@@ -664,6 +699,7 @@ header > div > div > a:hover {
   width: 400px;
   animation: moving 1.5s linear infinite alternate;
 }
+
 .section4 .row > div:first-of-type > .imgs img:nth-of-type(3) {
   top: -5%;
   right: 25%;
@@ -713,20 +749,21 @@ header > div > div > a:hover {
   bottom: 15%;
   width: 70px;
   right: 0;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 1.3s linear infinite alternate;
 }
+
 .section4 .row > div:last-of-type .imgs img:nth-of-type(3) {
   position: absolute;
   bottom: 35%;
   width: 70px;
   left: 0;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.5s linear infinite alternate;
 }
 .section4 .row > div:last-of-type .imgs img:nth-of-type(4) {
   position: absolute;
   top: 15%;
   width: 70px;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.9s linear infinite alternate;
   right: 10%;
 }
 @media (max-width: 1550px) {
@@ -812,8 +849,10 @@ header > div > div > a:hover {
 }
 @media (max-width: 576px) {
   .section4 {
-    margin-bottom: 12rem;
-    margin-top: 6rem;
+    margin-bottom: 0rem;
+    margin-top: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 4rem;
   }
   .section4 .row > div:first-of-type > img {
     width: 80%;
@@ -821,15 +860,16 @@ header > div > div > a:hover {
   }
 
   .section4 .row > div:first-of-type > .imgs img:nth-of-type(1) {
-    width: 50px;
+    width: 60px;
   }
   .section4 .row > div:first-of-type > .imgs img:nth-of-type(2) {
-    right: 0px;
-    width: 170px;
+    right: -30px;
+    width: 250px;
   }
   .section4 .row > div:first-of-type > .imgs img:nth-of-type(3) {
     width: 50px;
-    top: -1.5rem;
+    top: -1rem;
+    z-index: -2;
   }
 
   .section4 .row > div:last-of-type .texts p:first-of-type {
@@ -846,20 +886,23 @@ header > div > div > a:hover {
     z-index: -1;
   }
   .section4 .row > div:last-of-type .imgs img:nth-of-type(1) {
-    top: -90%;
+    top: -70%;
     right: 0%;
+    z-index: -1;
     width: 70%;
   }
   .section4 .row > div:last-of-type .imgs img:nth-of-type(2) {
     width: 50px;
-    bottom: -50%;
+    bottom: 15%;
+    right: 70%;
+    width: 60px;
   }
   .section4 .row > div:last-of-type .imgs img:nth-of-type(3) {
-    bottom: 10%;
-    width: 45px;
+    bottom: 200%;
+    width: 50px;
   }
   .section4 .row > div:last-of-type .imgs img:nth-of-type(4) {
-    top: -35%;
+    top: -45%;
     width: 50px;
   }
 }
@@ -887,7 +930,7 @@ header > div > div > a:hover {
   top: -5%;
   left: 30%;
   width: 80px;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.1s linear infinite alternate;
 }
 .section5 .row > div:last-of-type > .imgs img:nth-of-type(2) {
   top: 10%;
@@ -898,15 +941,14 @@ header > div > div > a:hover {
 .section5 .row > div:last-of-type > .imgs img:nth-of-type(4) {
   bottom: -2%;
   left: 30%;
-  transform: translateX(-50%);
   width: 80px;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.9s linear infinite alternate;
 }
 .section5 .row > div:last-of-type > .imgs img:nth-of-type(3) {
   bottom: 15%;
   width: 80px;
   right: 20%;
-  animation: moving 1.5s linear infinite alternate;
+  animation: moving 1.5s 0.5s linear infinite alternate;
 }
 
 .section5 .row > div:first-of-type {
@@ -1012,12 +1054,13 @@ header > div > div > a:hover {
 }
 @media (max-width: 576px) {
   .section5 {
-    margin-top: 10rem;
-    margin-bottom: 7rem;
+    margin-top: 0rem;
+    padding-top: 2rem;
+    margin-bottom: 1rem;
   }
   .section5 .row > div:last-of-type > img {
     width: 80%;
-    margin: 0 10% 3rem 0;
+    margin: 0 15% 3rem 0;
   }
 
   .section5 .row > div:last-of-type > .imgs img:nth-of-type(1) {
@@ -1025,8 +1068,9 @@ header > div > div > a:hover {
     top: -2rem;
   }
   .section5 .row > div:last-of-type > .imgs img:nth-of-type(2) {
-    right: 0px;
-    width: 160px;
+    top: -10%;
+    right: -60px;
+    width: 310px;
   }
   .section5 .row > div:last-of-type > .imgs img:nth-of-type(4) {
     bottom: 0%;
@@ -1041,6 +1085,9 @@ header > div > div > a:hover {
     top: -50%;
     z-index: -1;
     width: 70%;
+  }
+  .section5 .row > div:first-of-type {
+    z-index: 10;
   }
   .section5 .row > div:first-of-type .texts p:first-of-type {
     font-size: 20px;
