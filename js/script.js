@@ -6,6 +6,28 @@ window.onload = function () {
       document.querySelector(".toTop").classList.add("hide");
     }
     // ---------------------------
+    if (window.pageYOffset > 400) {
+      document
+        .querySelector(".section2 > .container img:nth-of-type(1)")
+        .classList.add("fstImgBigScreen");
+      document
+        .querySelector(".section2 > .container img:nth-of-type(2)")
+        .classList.add("secImgBigScreen");
+      document
+        .querySelector(".section2 > .container img:nth-of-type(3)")
+        .classList.add("therdImgBigScreen");
+    } else {
+      document
+        .querySelector(".section2 > .container img:nth-of-type(1)")
+        .classList.remove("fstImgBigScreen");
+      document
+        .querySelector(".section2 > .container img:nth-of-type(2)")
+        .classList.remove("secImgBigScreen");
+      document
+        .querySelector(".section2 > .container img:nth-of-type(3)")
+        .classList.remove("therdImgBigScreen");
+    }
+    // ---------------------------
     if (window.pageYOffset > 10) {
       document
         .querySelector(".section2 > .container img:nth-of-type(1)")

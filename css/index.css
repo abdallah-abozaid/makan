@@ -26,6 +26,7 @@ body {
   perspective: 500;
   padding-top: 1rem;
   width: 100%;
+  perspective: 600px;
 }
 section {
   overflow: hidden;
@@ -260,6 +261,10 @@ header > div > div > a:hover {
   border: 2px solid var(--main_color);
 }
 @media (max-width: 1550px) {
+  .section1 {
+    height: 65vh;
+    overflow: visible;
+  }
   .section1 > .imgs > img {
     position: absolute;
     width: 700px;
@@ -287,6 +292,9 @@ header > div > div > a:hover {
   }
 }
 @media (max-width: 992px) {
+  .section1 {
+    height: 45vh;
+  }
   .section1 > .imgs > img {
     width: 700px;
   }
@@ -314,7 +322,7 @@ header > div > div > a:hover {
 }
 @media (max-width: 576px) {
   .section1 {
-    height: 60vh;
+    height: 55vh;
     align-items: flex-start;
     padding-top: 20%;
   }
@@ -351,30 +359,52 @@ header > div > div > a:hover {
   width: 400px;
   top: 0px;
   left: 0px;
-  z-index: -1;
+  z-index: -11;
 }
 .section2 > .container {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
 }
 .section2 > .container img {
-  width: 30%;
+  width: 35%;
   margin: 0;
   transition: all 0.3s ease-in-out;
 }
 
 .section2 > .container img:nth-of-type(2) {
-  transform: translateY(-5rem);
+  transform: translateY(-2rem) scale(1.1) rotateX(13deg);
+  z-index: 5;
 }
 .section2 > .container img:nth-of-type(1) {
-  transform: translateX(-4rem);
+  transform: translateX(-14rem) rotateX(13deg);
+  z-index: -5;
 }
 .section2 > .container img:nth-of-type(3) {
-  transform: translateX(4rem);
+  transform: translateX(14rem) rotateX(13deg);
+  z-index: -5;
+}
+.section2 > .container {
+  perspective: 500px;
+}
+@media (min-width: 1550px) {
+  .secImgBigScreen {
+    transform: translateY(-2rem) scale(1.2) rotateX(0deg) !important;
+  }
+  .fstImgBigScreen {
+    transform: translate3d(-14rem, 0px, -24px) scale(1.1) rotateX(0deg) !important;
+  }
+  .therdImgBigScreen {
+    transform: translate3d(14rem, 0px, -24px) scale(1.1) rotateX(0deg) !important;
+  }
 }
 
 @media (max-width: 1550px) {
+  .section2 {
+    padding-top: 2rem;
+    padding-bottom: 0rem;
+  }
   .section2 > .imgs > img {
     width: 250px;
   }
@@ -382,69 +412,84 @@ header > div > div > a:hover {
     width: 33%;
     margin: 0;
   }
+  .section2 > .container img:nth-of-type(2) {
+    transform: translateY(-1rem) scale(1.1) rotateX(13deg);
+  }
   .section2 > .container img:nth-of-type(1) {
-    transform: translateX(-4rem);
+    transform: translateX(-10rem) rotateX(13deg);
   }
   .section2 > .container img:nth-of-type(3) {
-    transform: translateX(4rem);
+    transform: translateX(10rem) rotateX(13deg);
   }
-  .section2 > .container img:nth-of-type(2) {
-    transform: translateY(-3rem);
+  .secImgBigScreen {
+    transform: translateY(-1rem) scale(1.2) rotateX(0deg) !important;
+  }
+  .fstImgBigScreen {
+    transform: translate3d(-10rem, 0px, -24px) scale(1.1) rotateX(0deg) !important;
+  }
+  .therdImgBigScreen {
+    transform: translate3d(10rem, 0px, -24px) scale(1.1) rotateX(0deg) !important;
   }
 }
 @media (max-width: 992px) {
+  .section2 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
   .section2 > .imgs > img {
     width: 200px;
     left: 0px;
   }
   .section2 > .container img {
-    width: 33%;
+    width: 40%;
     margin: 0;
   }
+  .section2 > .container img:nth-of-type(2) {
+    transform: translateY(-1rem) scale(1.2) rotateX(13deg);
+  }
   .section2 > .container img:nth-of-type(1) {
-    transform: translateX(-1rem);
+    transform: translateX(-7rem) scale(1.1) rotateX(13deg);
   }
   .section2 > .container img:nth-of-type(3) {
-    transform: translateX(1rem);
+    transform: translateX(7rem) scale(1.1) rotateX(13deg);
   }
-  .section2 > .container img:nth-of-type(2) {
-    transform: translateY(-2rem);
+  .secImg {
+    transform: translateY(-1rem) scale(1.4) rotateX(0deg) !important;
+  }
+  .fstImg {
+    transform: translate3d(-7rem, 0px, -24px) scale(1.2) rotateX(0deg) !important;
+  }
+  .therdImg {
+    transform: translate3d(7rem, 0px, -24px) scale(1.2) rotateX(0deg) !important;
   }
 }
 @media (max-width: 576px) {
   .section2 {
-    padding-bottom: 4rem;
-    padding-top: 5rem;
-  }
-  .section2 > .container {
-    flex-wrap: wrap;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
   }
   .section2 > .container img {
-    width: 33.3%;
+    width: 45%;
     margin: 0;
   }
+
+  .section2 > .container img:nth-of-type(2) {
+    transform: translate3d(0.5rem, -0.7, -24px) scale(1.2) rotateX(13deg);
+  }
   .section2 > .container img:nth-of-type(1) {
-    transform: translateX(-0rem) scale(1.4) rotateX(20deg);
-    z-index: -3;
+    transform: translate3d(-4rem, 0px, -24px) scale(1.1) rotateX(13deg);
   }
   .section2 > .container img:nth-of-type(3) {
-    transform: translateX(0rem) scale(1.4);
-    z-index: -1;
-  }
-  .section2 > .container img:nth-of-type(2) {
-    transform: translateY(-1rem) scale(1.4);
-  }
-  /* ------ */
-  .fstImg {
-    transform: translateX(-0.5rem) scale(1.8) !important;
-    z-index: -3 !important;
-  }
-  .therdImg {
-    transform: translateX(0.5rem) scale(1.8) !important;
-    z-index: -1 !important;
+    transform: translate3d(4rem, 0px, -24px) scale(1.1) rotateX(13deg);
   }
   .secImg {
-    transform: translateY(-0.5rem) scale(2) !important;
+    transform: translateY(-0.5rem) scale(1.4) rotateX(0deg) !important;
+  }
+  .fstImg {
+    transform: translate3d(-3rem, 0px, -24px) scale(1.2) rotateX(0deg) !important;
+  }
+  .therdImg {
+    transform: translate3d(3rem, 0px, -24px) scale(1.2) rotateX(0deg) !important;
   }
 }
 /* -------end section2 */
@@ -2130,6 +2175,9 @@ footer .container .row > div:last-of-type .icons a:hover {
   }
   footer .container .row > div:last-of-type .icons {
     margin-right: 5%;
+  }
+  footer .container .row > div:last-of-type .icons img {
+    width: 1.7rem;
   }
 }
 
