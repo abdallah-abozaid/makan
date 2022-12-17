@@ -402,8 +402,8 @@ header > div > div > a:hover {
 
 @media (max-width: 1550px) {
   .section2 {
-    padding-top: 2rem;
-    padding-bottom: 0rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
   }
   .section2 > .imgs > img {
     width: 250px;
@@ -465,8 +465,8 @@ header > div > div > a:hover {
 }
 @media (max-width: 576px) {
   .section2 {
-    padding-bottom: 1rem;
-    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
   }
   .section2 > .container img {
     width: 45%;
